@@ -5,6 +5,8 @@
  body {
     font-family: Georgia, "Times New Roman", Times, serif;
     color: #555;
+    background-image: url('./assets/img/wood_background.jpg');
+    background-size: cover;
   }
   
   h1, .h1,
@@ -53,6 +55,15 @@
   .blog-nav-item:focus {
     color: #fff;
     text-decoration: none;
+  }
+  .blog-nav li {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    font-weight: 500;
+  }
+  .blog-nav li a {
+    color: #fff;
   }
   
   /* Active state gets a caret at the bottom */
