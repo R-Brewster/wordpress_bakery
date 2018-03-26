@@ -125,7 +125,23 @@
     width: 100%;
     } 
 
+  /* Menu Page */
+
+  .orbit {
+    height: 84vh;
+  }
+
+  .orbit-container {
+    height: 100%;
+  }
+
+  #menu-items {
+    width: 25vw;
+    border: 2px solid black;
+  }
+
   /* Sidebar */
+
   .sticky {
     background-color: #527809;
     padding: 10%;
@@ -162,3 +178,4 @@
   .pagination .current {
     background: #527809
   }
+

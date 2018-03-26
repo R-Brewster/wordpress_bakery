@@ -1,5 +1,5 @@
 <div class="sticky" data-sticky data-anchor="content">
-    <h4>About</h4>
+    <!-- <h4>About</h4>
     <p>
       <?php 
         the_author_meta('description'); 
@@ -11,5 +11,5 @@
     <?php 
       wp_get_archives('type=monthly'); 
     ?>
-    </ol>
+    </ol> -->
 </div>

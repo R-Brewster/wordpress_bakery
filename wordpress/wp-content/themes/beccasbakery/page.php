@@ -27,7 +27,9 @@
             <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
             <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
             <li class="is-active orbit-slide">
-                <img class="orbit-image" src="https://placehold.it/2000x750&text=1st" alt="Space">
+                <?php 
+                     echo '<img src="data:image/jpg;base64,'.base64_encode(file_get_contents('C:\MAMP\htdocs\wordpress_bakery\wordpress\wp-content\themes\beccasbakery\assets\img\Key Lime_pie.jpg')).'" />'
+                ?>
                 <figcaption class="orbit-caption">Space, the final frontier.</figcaption>
             </li>
             <li class="orbit-slide">
@@ -87,6 +89,16 @@
         </div>
 
     </article>
+
+    <div id="menu-items">
+    </div
+
+    <?php 
+          get_template_part('menu_content', get_post_format()); 
+    ?>
+
+
+    <?php get_sidebar() ?>
 
     
     <?php get_footer() ?>

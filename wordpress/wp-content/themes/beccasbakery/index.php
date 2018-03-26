@@ -70,16 +70,10 @@
             <div class="blog-post">
               <?php 
               if(have_posts()) : while (have_posts()) : the_post();
-                get_template_part('content', get_post_format()); 
+                get_template_part('blog_content', get_post_format()); 
               endwhile; endif;
               ?>
             </div>
-            <?php
-              add_shortcode( 'divider', 'shortcode_insert_divider' );
-              function shortcode_insert_divider( ) {
-                 return '<div class="divider"></div>';
-              }
-            ?>
         </div>
       </div>
     </article>
