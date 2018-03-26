@@ -25,7 +25,7 @@
     <div class="callout large primary" style="padding: 0">
       <div id="hero-image">
         <?php
-          echo '<img src="data:image/jpg;base64,'.base64_encode(file_get_contents('C:\MAMP\htdocs\wordpress_bakery\wordpress\wp-content\themes\beccasbakery\assets\img\header' . rand(1, 6) . '.jpg')).'" />'
+          echo '<img src="data:image/jpg;base64,'.base64_encode(file_get_contents('C:\MAMP\htdocs\wordpress_bakery\wordpress\wp-content\themes\beccasbakery\assets\img\header' . rand(1, 3) . '.jpg')).'" />'
         ?>
       </div>
       <div class="text-center">
@@ -48,12 +48,25 @@
                     ?>
                   <p>We started in Los Angeles, California and proudly cater the City of Angels’ happiest moments. From life’s grand occasions to the “just because,” we will bring only the freshest and highest-quality baked treats.</p>
                   <p>We have a wide variety of menu items, from sumptuous red velvet cupcakes, to the beloved classic apple pie. We are always updating our menu, so check often to see what we might be able to deliver to you today!</p>
+                  <?php
+                    echo '<img id="bottom-frame" src="data:image/jpg;base64,'.base64_encode(file_get_contents('C:\MAMP\htdocs\wordpress_bakery\wordpress\wp-content\themes\beccasbakery\assets\img\small_frame2.png')).'" />'
+                  ?>
                 </div>
-                <?php
-                  echo '<img id="bottom-frame" src="data:image/jpg;base64,'.base64_encode(file_get_contents('C:\MAMP\htdocs\wordpress_bakery\wordpress\wp-content\themes\beccasbakery\assets\img\small_frame2.png')).'" />'
-                ?>
             </div>
-          
+        </div>
+      </div>
+    </article>
+
+    <div id="blog-center-image">
+      <?php
+        echo '<img src="data:image/jpg;base64,'.base64_encode(file_get_contents('C:\MAMP\htdocs\wordpress_bakery\wordpress\wp-content\themes\beccasbakery\assets\img\header' . rand(4, 6) . '.jpg')).'" />'
+      ?>
+    </div>
+
+    <article class="grid-container">
+       <h1 id="blog-section-title" >What's Cooking:</h1>
+       <div class="grid-x grid-margin-x" id="content">
+        <div class="medium-9 cell blog-container">
             <div class="blog-post">
               <?php 
               if(have_posts()) : while (have_posts()) : the_post();
@@ -61,11 +74,18 @@
               endwhile; endif;
               ?>
             </div>
+            <?php
+              add_shortcode( 'divider', 'shortcode_insert_divider' );
+              function shortcode_insert_divider( ) {
+                 return '<div class="divider"></div>';
+              }
+            ?>
         </div>
-        
-        <!-- <?php get_sidebar() ?>  -->
       </div>
     </article>
+    
+    <?php get_footer() ?>
+
   </body>
 </html>
 
