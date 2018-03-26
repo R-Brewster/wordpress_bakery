@@ -23,7 +23,7 @@
     <?php get_header() ?>
 
     <div class="callout large primary" style="padding: 0">
-    <div id="hero-image">
+      <div id="hero-image">
         <?php
           echo '<img src="data:image/jpg;base64,'.base64_encode(file_get_contents('C:\MAMP\htdocs\wordpress_bakery\wordpress\wp-content\themes\beccasbakery\assets\img\header' . rand(1, 6) . '.jpg')).'" />'
         ?>
@@ -38,34 +38,33 @@
     </div>
 
     <article class="grid-container">
-    <div class="grid-x grid-margin-x" id="content">
-      
-    <div class="medium-9 cell">
-      <div class="blog-post">
-        <?php 
-        if(have_posts()) : while (have_posts()) : the_post();
-          get_template_part('content', get_post_format()); 
-        endwhile; endif;
-        ?>
-        <?php
-          echo '<img id="bottom-frame" src="data:image/jpg;base64,'.base64_encode(file_get_contents('C:\MAMP\htdocs\wordpress_bakery\wordpress\wp-content\themes\beccasbakery\assets\img\small_frame2.png')).'" />'
-        ?>
+      <div class="grid-x grid-margin-x" id="content">
+        <div class="medium-9 cell blog-container">
+            <div class="blog-post">
+                <div>
+                  <h2>We're a little company with a lot of heart</h2>
+                  <?php
+                      echo '<img id="first-post-img" src="data:image/jpg;base64,'.base64_encode(file_get_contents('C:\MAMP\htdocs\wordpress_bakery\wordpress\wp-content\themes\beccasbakery\assets\img\pastry_heart.jpg')).'" />'
+                    ?>
+                  <p>We started in Los Angeles, California and proudly cater the City of Angels’ happiest moments. From life’s grand occasions to the “just because,” we will bring only the freshest and highest-quality baked treats.</p>
+                  <p>We have a wide variety of menu items, from sumptuous red velvet cupcakes, to the beloved classic apple pie. We are always updating our menu, so check often to see what we might be able to deliver to you today!</p>
+                </div>
+                <?php
+                  echo '<img id="bottom-frame" src="data:image/jpg;base64,'.base64_encode(file_get_contents('C:\MAMP\htdocs\wordpress_bakery\wordpress\wp-content\themes\beccasbakery\assets\img\small_frame2.png')).'" />'
+                ?>
+            </div>
+          
+            <div class="blog-post">
+              <?php 
+              if(have_posts()) : while (have_posts()) : the_post();
+                get_template_part('content', get_post_format()); 
+              endwhile; endif;
+              ?>
+            </div>
+        </div>
+        
+        <!-- <?php get_sidebar() ?>  -->
       </div>
-      
-    </div>
-    <div class="medium-3 cell" data-sticky-container>
-      <div class="sticky" data-sticky data-anchor="content">
-        <h4>About</h4>
-        <p><?php the_author_meta('description'); ?></p>
-
-        <h4>Archives</h4>
-          <ol class="list-unstyled">
-          <?php wp_get_archives('type=monthly'); ?>
-        </ol>
-      </div>
-    </div>
-    </div>
-
     </article>
   </body>
 </html>

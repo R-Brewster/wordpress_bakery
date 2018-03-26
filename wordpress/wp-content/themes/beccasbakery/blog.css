@@ -64,10 +64,21 @@
 
   /* Blog Content */
 
-  .blog-post {
+  #content > .blog-container {
+    width: 100%
+  }
+
+  #first-post-img {
+    float: left;
+    width: 28%;
+    margin-right: 2%;
+  }
+
+  .blog-post > div {
     background-color: #bc79ad;
     padding: 3%;
     border-radius: 8%;
+    margin-bottom: 5%;
   }
 
   .blog-post p {
@@ -97,9 +108,26 @@
     width: 14vw;
   }
 
+  
+
   /* Sidebar */
+  .sticky {
+    background-color: #527809;
+    padding: 10%;
+    border-radius: 14%;
+  }
+
   .sticky h4 {
-    color: #730071;
+    color: white;
+    font-family: 'Sacramento', cursive;
+  }
+
+  .sticky p {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .sticky a {
+    font-family: 'Raleway', sans-serif;
   }
 
   .list-unstyled a {
