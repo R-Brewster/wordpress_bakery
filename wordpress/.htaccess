@@ -1,5 +1,6 @@
 
 # BEGIN WordPress
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /wordpress_bakery/wordpress/
@@ -8,5 +9,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /wordpress_bakery/wordpress/index.php [L]
 </IfModule>
+
+
 
 # END WordPress
