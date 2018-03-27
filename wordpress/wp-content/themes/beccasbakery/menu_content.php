@@ -10,10 +10,10 @@
 
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            $('.menu-items').innerHTML = this.responseText;
+            document.getElementById('menu-items').innerHTML = this.responseText;
         }
     };
 
-    xmlhttp.open("GET", "menu_request.php", true);
+    xmlhttp.open("GET","<?php echo get_bloginfo('template_directory'); ?>'/menu_request.php'", true);
     xmlhttp.send();
 </script>
